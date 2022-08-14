@@ -1,8 +1,72 @@
 .navigation {
-    padding: 20px;
+  padding: 10px;
+  border: 2px solid gray;
 
-    .link {
-        font-size: 20px;
-        color: gray;
+  .link {
+    font-size: 20px;
+    color: gray;
+    margin: 0 20px;
+  }
+}
+
+.btn-push {
+  margin: 20px;
+  border: 2px solid gray;
+  color: gray;
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &:hover {
+    color: green;
+    border-color: green;
+  }
+}
+
+.hello {
+  h1 {
+    margin: 10px 0;
+    text-decoration: underline;
+    background-color: beige;
+  }
+  .section {
+    border: 2px solid green;
+    padding: 10px;
+  }
+}
+
+.sections__a {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  .section {
+    border: 2px solid magenta;
+    border-radius: 4px;
+    margin: 20px 0;
+
+    i {
+      color: olive;
+      font-size: 22px;
     }
+  }
+}
+
+.sections__b,
+.sections__c {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  .section {
+    border: 2px solid orange;
+    border-radius: 4px;
+    width: 100%;
+
+    i {
+      color: olive;
+      font-size: 22px;
+    }
+  }
 }

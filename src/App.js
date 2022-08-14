@@ -1,7 +1,8 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./Home";
-import Hello from "./Hello";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import GlobalContext from "./context/GlobalContext";
+import Home from "./components/Home";
+import Hello from "./components/Hello";
+import Navigation from "./components/Navigation";
 import "./styles/App.css";
 import "./styles/index.css";
 import "./styles/Hello.scss";
@@ -10,15 +11,14 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <nav className="navigation">
-          <Link className="link" to="/">Home</Link>
-          <Link className="link" to="hello">Hello</Link>
-        </nav>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/hello" element={<Hello />} />
-          <Route path="*" element={<div>Not found</div>} />
-        </Routes>
+        <Navigation />
+        <GlobalContext>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/hello" element={<Hello />} />
+            <Route path="*" element={<div>Not found</div>} />
+          </Routes>
+        </GlobalContext>
       </BrowserRouter>
     </div>
   );
