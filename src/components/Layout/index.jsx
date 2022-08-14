@@ -1,30 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import GlobalContext from "./context/GlobalContext";
-import Home from "./components/Home";
-import Hello from "./components/Hello/Hello";
-import Navigation from "./components/Navigation";
-import "./styles/App.css";
-import "./styles/index.css";
-import "./styles/Hello.scss";
+import { Routes, Route } from "react-router-dom";
+import Home from "../Home";
+import Hello from "../Hello";
 
-const App = () => {
+
+const Layout = () => {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Navigation />
-        <GlobalContext>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/hello" element={<Hello />} />
-            <Route path="*" element={<div>Not found</div>} />
-          </Routes>
-        </GlobalContext>
-      </BrowserRouter>
-    </div>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route path="/hello" element={<Hello />} />
+      <Route path="*" element={<div>Not found</div>} />
+    </Routes>
   );
 };
 
-export default App;
+export default Layout;
+
+
+
+
+
+
+
+
 
 // import { Route, Switch } from "react-router-dom";
 // import AboutPage from "./AboutPage";
