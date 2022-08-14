@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalContext from "./context/GlobalContext";
 import Home from "./components/Home";
-import Hello from "./components/Hello";
+import Hello from "./components/Hello/Hello";
 import Navigation from "./components/Navigation";
 import "./styles/App.css";
 import "./styles/index.css";
