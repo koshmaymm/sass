@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 import GlobalContext from "./context/GlobalContext";
 import Layout from "./components/Layout";
@@ -11,10 +12,12 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <GlobalContext>
-          <Navigation />
-          <Layout />
-        </GlobalContext>
+        <Suspense fallback={null}>
+          <GlobalContext>
+            <Navigation />
+            <Layout />
+          </GlobalContext>
+        </Suspense>
       </BrowserRouter>
     </div>
   );
